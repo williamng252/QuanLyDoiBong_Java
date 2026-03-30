@@ -10,12 +10,23 @@
 		<property name="hibernate.connection.password">quan0392068967</property>
 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
-		
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>
-		
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
 		<mapping class="com.football.entity.QuocTich"/>
-	</session-factory>
+		<mapping class="com.football.entity.ViTri"/>
+		<mapping class="com.football.entity.HLV"/>
+		<mapping class="com.football.entity.SVD"/>
+		<mapping class="com.football.entity.GiaiDau"/>
+		
+		<mapping class="com.football.entity.DoiBong"/>
+		<mapping class="com.football.entity.CauThu"/>
+		<mapping class="com.football.entity.ChiSo"/>
+		
+		<mapping class="com.football.entity.HopDong"/>
+		<mapping class="com.football.entity.TranDau"/>
+		<mapping class="com.football.entity.ChiTietTranDau"/>
+		
+		</session-factory>
 </hibernate-configuration>

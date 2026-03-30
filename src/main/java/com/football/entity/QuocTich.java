@@ -1,21 +1,21 @@
 package com.football.entity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
-@Entity
-@Table(name = "quoc_tich")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity 
+@Table(name = "quoc_tich")  
+@Data // Tự động tạo Getter, Setter, Constructor
 public class QuocTich {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ma_qt")
-    private int maQT;
+    
+    @Id // 
+    @Column(name = "ma_qt")  
+    private String maQT; 
 
-    @Column(name = "ten_quoc_gia", length = 100, nullable = false)
+    @Column(name = "ten_quoc_gia", length = 100, nullable = false) // Cột tên quốc gia, tối đa 100 ký tự, không được để trống (nullable = false)
     private String tenQuocGia;
 }
