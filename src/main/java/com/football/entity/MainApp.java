@@ -75,5 +75,11 @@ public class MainApp {
         System.out.println("\n=====================================================");
         System.out.println("🏁 HOÀN TẤT TEST ALL - BACKEND SẴN SÀNG LÊN SÀN! 🏁");
         System.out.println("=====================================================");
+        
+        // Khởi động Giao diện Swing (GUI)
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            com.football.gui.MainFrame mainFrame = new com.football.gui.MainFrame();
+            mainFrame.setVisible(true);
+        });
     }
 }
