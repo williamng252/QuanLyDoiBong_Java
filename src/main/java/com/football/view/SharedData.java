@@ -1,4 +1,4 @@
-package com.football.gui;
+package com.football.view;
 
 import java.util.ArrayList;
 import java.util.List;

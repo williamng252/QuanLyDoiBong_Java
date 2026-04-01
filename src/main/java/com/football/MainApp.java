@@ -1,6 +1,11 @@
-package com.football.entity;
+package com.football;
 
 import com.football.dao.*;
+import com.football.entity.CauThu;
+import com.football.entity.DoiBong;
+import com.football.entity.HopDong;
+import com.football.entity.TranDau;
+
 import java.util.Date;
 import java.util.List;
 
@@ -78,7 +83,7 @@ public class MainApp {
         
         // Khởi động Giao diện Swing (GUI)
         javax.swing.SwingUtilities.invokeLater(() -> {
-            com.football.gui.MainFrame mainFrame = new com.football.gui.MainFrame();
+            com.football.view.MainFrame mainFrame = new com.football.view.MainFrame();
             mainFrame.setVisible(true);
         });
     }

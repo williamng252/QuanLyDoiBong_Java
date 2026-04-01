@@ -1,4 +1,4 @@
-package com.football.gui;
+package com.football.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,17 +20,17 @@ public class DashboardPanel extends JPanel {
         // Cards Panel
         JPanel cardsPanel = new JPanel(new GridLayout(1, 3, 20, 20));
 
-        JPanel cardTeams = createCardPanel("Tổng Đội Bóng", new Color(41, 128, 185));
+        JPanel cardTeams = createCardPanel("Tổng Đội Bóng", new Color(128, 255, 255));
         lblTotalTeams = createCardValueLabel(String.valueOf(SharedData.totalTeams));
         cardTeams.add(lblTotalTeams, BorderLayout.CENTER);
         cardsPanel.add(cardTeams);
 
-        JPanel cardPlayers = createCardPanel("Tổng Cầu Thủ", new Color(39, 174, 96));
+        JPanel cardPlayers = createCardPanel("Tổng Cầu Thủ", new Color(0, 128, 255));
         lblTotalPlayers = createCardValueLabel(String.valueOf(SharedData.totalPlayers));
         cardPlayers.add(lblTotalPlayers, BorderLayout.CENTER);
         cardsPanel.add(cardPlayers);
 
-        JPanel cardBudget = createCardPanel("Ngân Sách Tối Đa", new Color(142, 68, 173));
+        JPanel cardBudget = createCardPanel("Ngân Sách Tối Đa", new Color(128, 255, 128));
         lblBudget = createCardValueLabel(String.format("$%,.0f", SharedData.userBudget));
         cardBudget.add(lblBudget, BorderLayout.CENTER);
         cardsPanel.add(cardBudget);
@@ -72,7 +72,7 @@ public class DashboardPanel extends JPanel {
         panel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
         JLabel lblTitle = new JLabel(title);
-        lblTitle.setForeground(Color.WHITE);
+        lblTitle.setForeground(Color.BLACK);
         lblTitle.setFont(new Font("Segoe UI", Font.BOLD, 16));
         panel.add(lblTitle, BorderLayout.NORTH);
 
@@ -81,7 +81,7 @@ public class DashboardPanel extends JPanel {
 
     private JLabel createCardValueLabel(String value) {
         JLabel lblValue = new JLabel(value);
-        lblValue.setForeground(Color.WHITE);
+        lblValue.setForeground(Color.BLACK);
         lblValue.setFont(new Font("Segoe UI", Font.BOLD, 36));
         return lblValue;
     }

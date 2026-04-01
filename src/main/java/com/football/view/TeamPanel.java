@@ -1,4 +1,4 @@
-package com.football.gui;
+package com.football.view;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

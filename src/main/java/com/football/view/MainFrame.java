@@ -1,4 +1,4 @@
-package com.football.gui;
+package com.football.view;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,7 +21,7 @@ public class MainFrame extends JFrame {
         sidebar.setBackground(new Color(44, 62, 80)); // Đen xám xanh đậm
 
         JLabel logoLabel = new JLabel("FOOTBALL MGR", SwingConstants.CENTER);
-        logoLabel.setForeground(new Color(236, 240, 241));
+        logoLabel.setForeground(new Color(192, 192, 192));
         logoLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
         logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         logoLabel.setBorder(BorderFactory.createEmptyBorder(30, 0, 50, 0));
