@@ -18,6 +18,13 @@ public class DoiBong {
 
     @Column(name = "logo")
     private String logo; // Lưu đường dẫn hình ảnh logo
+    
+ // Thêm điểm số và hiệu số để phục vụ Bảng Xếp Hạng
+    @Column(name = "diem_so")
+    private int diem = 0; // Mặc định tạo đội bóng là 0 điểm
+
+    @Column(name = "hieu_so")
+    private int hieuSo = 0; 
 
     // QUAN HỆ 1-1: Một đội bóng chỉ có 1 HLV trưởng
     @OneToOne 

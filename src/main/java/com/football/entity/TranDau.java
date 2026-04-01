@@ -17,6 +17,13 @@ public class TranDau {
 
     @Column(name = "ti_so")
     private String tiSo; // VD: "2-1"
+    
+ // Lưu số bàn thắng thực tế của trận đấu
+    @Column(name = "ban_thang_doi_nha")
+    private int banThangDoiNha = 0;
+
+    @Column(name = "ban_thang_doi_khach")
+    private int banThangDoiKhach = 0;
 
     @ManyToOne
     @JoinColumn(name = "ma_giai")
@@ -29,4 +36,6 @@ public class TranDau {
     @ManyToOne
     @JoinColumn(name = "doi_khach") // Đội bóng thứ 2 (Khách)
     private DoiBong doiKhach;
+    
+    
 }

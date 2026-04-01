@@ -19,8 +19,8 @@ public class HopDong {
     @Column(name = "ngay_het_han")
     private Date ngayHetHan;
 
-    @Column(name = "muc_luong")
-    private double mucLuong;
+    @Column(name = "gia_tri")
+    private double giaTri;
 
     // Nhiều Hợp đồng có thể thuộc về 1 Cầu thủ (Cầu thủ gia hạn nhiều lần)
     @ManyToOne
