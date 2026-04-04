@@ -32,6 +32,7 @@ public class MainFrame extends JFrame {
         JButton btnTeam = createSidebarButton("Đội Bóng");
         JButton btnPlayer = createSidebarButton("Cầu Thủ");
         JButton btnMarket = createSidebarButton("Chợ Chuyển Nhượng");
+        JButton btnMatch = createSidebarButton("Quản Lý Trận Đấu");
         JButton btnTactics = createSidebarButton("Sơ Đồ Chiến Thuật");
 
         sidebar.add(btnDashboard);
@@ -42,6 +43,8 @@ public class MainFrame extends JFrame {
         sidebar.add(Box.createRigidArea(new Dimension(0, 5)));
         sidebar.add(btnMarket);
         sidebar.add(Box.createRigidArea(new Dimension(0, 5)));
+        sidebar.add(btnMatch);
+        sidebar.add(Box.createRigidArea(new Dimension(0, 5)));
         sidebar.add(btnTactics);
 
         add(sidebar, BorderLayout.WEST);
@@ -49,12 +52,14 @@ public class MainFrame extends JFrame {
         // --- Content Area (CardLayout) ---
         cardLayout = new CardLayout();
         mainContentPanel = new JPanel(cardLayout);
+        mainContentPanel.setBackground(new Color(230, 230, 230));
 
         // Thêm các panel con vào cardLayout
         mainContentPanel.add(new DashboardPanel(), "Dashboard");
         mainContentPanel.add(new TeamPanel(), "Team");
         mainContentPanel.add(new PlayerPanel(), "Player");
         mainContentPanel.add(new TransferMarketPanel(), "Market");
+        mainContentPanel.add(new MatchPanel(), "Match");
         mainContentPanel.add(new TacticsPanel(), "Tactics");
 
         add(mainContentPanel, BorderLayout.CENTER);
@@ -64,6 +69,7 @@ public class MainFrame extends JFrame {
         btnTeam.addActionListener(e -> cardLayout.show(mainContentPanel, "Team"));
         btnPlayer.addActionListener(e -> cardLayout.show(mainContentPanel, "Player"));
         btnMarket.addActionListener(e -> cardLayout.show(mainContentPanel, "Market"));
+        btnMatch.addActionListener(e -> cardLayout.show(mainContentPanel, "Match"));
         btnTactics.addActionListener(e -> cardLayout.show(mainContentPanel, "Tactics"));
     }
 

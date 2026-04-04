@@ -27,6 +27,16 @@ public class CauThuDAO extends BaseDAO<CauThu> {
         }
     }
 
+    // TÌM KIẾM THEO SỐ ÁO
+    public List<CauThu> timKiemTheoSoAo(int soAo) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            String hql = "FROM CauThu c WHERE c.soAo = :soAo";
+            Query<CauThu> query = session.createQuery(hql, CauThu.class);
+            query.setParameter("soAo", soAo);
+            return query.list();
+        }
+    }
+
     // 2. LỌC THEO QUỐC TỊCH (Dùng mã quốc tịch như VN, ENG)
     public List<CauThu> locTheoQuocTich(String maQT) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {

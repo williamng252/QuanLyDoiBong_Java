@@ -25,7 +25,7 @@ public class MainApp {
         // KỊCH BẢN 1: TRẬN SIÊU KINH ĐIỂN & CẬP NHẬT BXH
         // ---------------------------------------------------------
         System.out.println(">>> [Kịch bản 1]: MU vs Real Madrid (Tỉ số 3-1)");
-        
+
         // Lấy 2 đội từ DB (Giả sử mã là 'MU' và 'RM' đã có trong DB)
         DoiBong mu = doiBongDAO.getByID("MU");
         DoiBong real = doiBongDAO.getByID("RM");
@@ -80,11 +80,24 @@ public class MainApp {
         System.out.println("\n=====================================================");
         System.out.println("🏁 HOÀN TẤT TEST ALL - BACKEND SẴN SÀNG LÊN SÀN! 🏁");
         System.out.println("=====================================================");
-        
+
         // Khởi động Giao diện Swing (GUI)
         javax.swing.SwingUtilities.invokeLater(() -> {
+            try {
+                // Tắt SystemLookAndFeel để các Nút bấm (Button) có thể hiển thị MÀU SẮC gốc
+                java.awt.Color grayColor = new java.awt.Color(230, 230, 230);
+                javax.swing.UIManager.put("control", grayColor);
+                javax.swing.UIManager.put("Panel.background", grayColor);
+                javax.swing.UIManager.put("ScrollPane.background", grayColor);
+                javax.swing.UIManager.put("Viewport.background", grayColor);
+                javax.swing.UIManager.put("SplitPane.background", grayColor);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+
             com.football.view.MainFrame mainFrame = new com.football.view.MainFrame();
             mainFrame.setVisible(true);
+            mainFrame.getContentPane().setBackground(new java.awt.Color(230, 230, 230));
         });
     }
 }

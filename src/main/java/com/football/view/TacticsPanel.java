@@ -38,8 +38,8 @@ public class TacticsPanel extends JPanel {
         });
 
         btnReset.addActionListener(e -> {
-            String formation = (String) cbFormation.getSelectedItem();
-            pitchPanel.setFormation(formation);
+            cbFormation.setSelectedItem("4-3-3");
+            pitchPanel.setFormation("4-3-3");
         });
         
         pitchPanel = new PitchPanel();
